@@ -1,0 +1,290 @@
+/* ========== 基本スタイル ========== */
+
+body {
+    background-color: rgb(229, 214, 186);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+h1 {
+    margin-top: 40px;
+}
+
+/* テーブル全体の基本設定 */
+table {
+    border-collapse: collapse; /* 枠線を重ねて1本にする */
+    border: 1px solid black; /* 外枠の黒線 */
+    margin: 40px auto; /* 上下余白40px、中央揃え */
+    width: 100%; /* テーブルの幅を親要素に合わせる */
+    height: 100%; /* 高さを親要素に合わせる */
+    text-align: center; /* テキスト中央揃え */
+    background-color: white; /* テーブル背景色を白に設定 */
+    border-spacing: 0; /* 枠間の隙間をなくす */
+    padding: 8px 15px; /* セル内の余白調整 */
+}
+
+/* ========== ナビゲーションバー ========== */
+
+.navbar {
+    width: 100%;
+    height: 64px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 40px;
+    box-sizing: border-box;
+
+    background-color: #444;
+    color: #fff;
+
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+.navbar-title {
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.navbar-page {
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: #d0d0d0;
+}
+
+/* ---------- タイトル ---------- */
+
+.result-header {
+    margin-bottom: 30px;
+}
+
+.result-header .eyebrow {
+    margin: 0 0 8px;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: #258;
+}
+
+.result-header h1 {
+    margin: 0 0 15px;
+    font-size: 40px;
+    letter-spacing: 4px;
+}
+
+/* ========== 結果表示テーブル(result)のデザイン ========== */
+.result {
+    width: 50%; /* テーブルの幅を設定 */
+    height: 13%; /* テーブルの高さを設定 */
+    font-size: 20px; /* フォントサイズ調整 */
+}
+
+.result th:last-child {
+    /* 最上段の右側の外枠の色を変える */
+    border-right: 2px solid #258;
+}
+
+.result tr td {
+    /* 左と下側の外枠の色を変える */
+    border-bottom: 2px solid #84b2e0;
+    border-left: 2px solid #84b2e0;
+}
+
+.result tr td:last-child {
+    /* 右側の外枠の色を変える */
+    border-right: 2px solid #84b2e0;
+}
+
+.result th {
+    /* 最上段の設定 */
+    color: #fff;  /*文字の色*/
+    font-weight: bold;  /*太字にする*/
+    text-align: center;  /*中央揃えにする*/
+    line-height: 120%;  /*枠の高さ*/
+
+    /* 背景 */
+    background: #258;  /*色*/
+    /* グラデーション */
+    background: -moz-linear-gradient(rgba(34, 85, 136, 0.7), rgba(34, 85, 136, 0.9) 50%);
+    background: -webkit-gradient(linear, 100% 0%, 100% 50%, from(rgba(34, 85, 136, 0.7)), to(rgba(34, 85, 136, 0.9)));
+    
+    /* 外枠の色 */
+    border-left: 2px solid #258;
+    border-top: 2px solid #258;
+    border-bottom: 2px solid #258;
+
+    /* 内側の影 */
+    box-shadow: 0px 1px 1px rgba(255, 255, 255, 0.3) inset;
+}
+
+.result-header {
+    margin: 45px 0 30px;
+}
+
+.result-message {
+    display: inline-block;
+
+    margin: 0;
+    padding: 10px 30px;
+
+    border-radius: 4px;
+
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* ---------- 勝敗 ---------- */
+
+.result-message {
+    display: inline-block;
+    margin: 0;
+    padding: 10px 30px;
+    border-radius: 4px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.result-message.black-win {
+    background-color: #222;
+    color: #fff;
+}
+
+.result-message.white-win {
+    background-color: #fff;
+    color: #222;
+    border: 2px solid #222;
+}
+
+.result-message.draw {
+    background-color: #258;
+    color: #fff;
+}
+
+
+/* ---------- スコア ---------- */
+
+.score-section {
+    margin: 30px auto;
+}
+
+.score-section h2,
+.board-section h2 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.score-item {
+    min-width: 130px;
+    padding: 15px 25px;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.black-score {
+    background-color: #222;
+    color: #fff;
+}
+
+.white-score {
+    background-color: #fff;
+    color: #222;
+    border: 2px solid #222;
+}
+
+.player-label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.score-value {
+    display: block;
+    margin-top: 5px;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.score-divider {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+
+/* ========== ゲームボード(board)のデザイン ========== */
+.board {
+    width: 50%; /* ゲームボードの幅を広げる */
+    height: auto; /* 高さは自動調整 */
+    font-size: 0; /* 余白をなくすため */
+    border-spacing: 0; /* 枠間の隙間をなくす */
+    margin: 20px auto; /* 中央に配置 */
+    background-color: #2c5e1a; /* ボード全体の背景を濃い緑色に */
+    border: 5px solid #1a380f; /* 外枠を濃い緑にして強調 */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4); /* ボードに影を付けて立体感を追加 */
+}
+
+.board th {
+    background-color: #1f4412; /* ヘッダーの背景色をボードに合わせる */
+    color: #fff; /* ヘッダー文字色を白に */
+    font-size: 20px; /* ヘッダー文字サイズ */
+    padding: 5px; /* ヘッダーセル内の余白 */
+    border: 2px solid #1f4412; /* ヘッダーの枠 */
+    text-align: center;
+}
+
+.board td {
+    width: 12.5%; /* 各セルの幅を均等に */
+    height: 70px; /* セルの高さ */
+    background-color: #398d3d; /* マス目の背景色を緑色に */
+    border: 1px solid #1f4412; /* 区切り線を濃い緑色に */
+    text-align: center; /* 横中央揃え */
+    vertical-align: middle; /* 縦中央揃え */
+    position: relative; /* 石のデザイン調整に必要 */
+}
+
+/* 白い石のデザイン */
+.stone.white {
+    content: "";
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* 円形にする */
+    background: radial-gradient(circle at top left, #ffffff, #d9d9d9); /* グラデーションで光沢を表現 */
+    box-shadow: inset -2px -2px 6px rgba(255, 255, 255, 0.5), /* 内側の光 */
+                2px 2px 6px rgba(0, 0, 0, 0.3); /* 外側の影 */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* 黒い石のデザイン */
+.stone.black {
+    content: "";
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* 円形にする */
+    background: radial-gradient(circle at top left, #4a4a4a, #000000); /* グラデーションで立体感 */
+    box-shadow: inset -2px -2px 6px rgba(0, 0, 0, 0.5), /* 内側の光 */
+                2px 2px 6px rgba(0, 0, 0, 0.5); /* 外側の影 */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* ボード全体の余白調整 */
+.board th:first-child, .board th:last-child {
+    padding: 10px;
+}
