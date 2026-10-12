@@ -1,0 +1,2 @@
+# OthelloGame
+Pythonで作ったCLIで操作するオセロゲームです
