@@ -89,7 +89,7 @@ python-othello/
 ## サンプル画面
 
 対局結果のサンプル
-[対局結果画面](examples/othello_image.png)
+![対局結果画面](examples/othello_image.png)
 
 ## 今後の改善案
 
