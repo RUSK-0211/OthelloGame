@@ -88,11 +88,8 @@ python-othello/
 
 ## サンプル画面
 
-対局結果のサンプルは [`examples/sample_result.html`](examples/sample_result.html) から確認できます。
-
-<!-- 必要に応じて、READMEと同じディレクトリに画像を置いて掲載できます。 -->
-
-<!-- ![対局結果画面](images/result.png) -->
+対局結果のサンプル
+[対局結果画面](examples/othello_image.png)
 
 ## 今後の改善案
 
